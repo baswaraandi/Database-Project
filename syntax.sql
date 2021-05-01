@@ -39,6 +39,4 @@ insert into stock values
 ("KUR102","Sukari Deluxe","Premium",50),
 ("KUR103","Sukari Libya","Standard",20),
 ("KUR201","Palm Frutt Madu","Standard",10),
-("KUR202","Palm Frutt Tunisia","Premium",30),
-("KUR401","Halawi","Standard",10),
-("KUR501","Ajwa","Star",100),
+("KUR501","Ajwa","Star",100);
