@@ -1,0 +1,144 @@
+/*NAVBAR*/
+.Logopic{
+    height: 60px;
+    width: 65px;
+    text-align: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    float: left;
+}
+
+.Title_Navbar{
+    float:left;
+    margin-top: 25px;
+    margin-left: 12px;
+}
+
+*, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    height: 75px;
+    background-color: #B8977E;
+    box-shadow: -1px -7px 20px 0px #888;
+}
+nav ul{
+    position: relative;
+    top: 20px;
+    margin: 0;
+    float: right;
+    right: 0%;
+}
+nav ul li{
+    float: left;
+    display: block;
+    margin: 8px 17px 0px 17px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul li a:hover{
+    color: black;
+}
+
+h1{
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*HOME*/
+
+.Homepic{
+    height: 350px;
+    width: 325px;
+    margin: 50px 25px 50px 58px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+
+.Benefit-pic{
+    height: 150px;
+    width: 300px;
+    margin: 25px 50px 50px 60px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+
+.Benefit-text{
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Column-paragraph{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    text-align: center;
+}
+
+/*PRODUCTS - Page 1*/
+.Heading-Page{
+    float:none;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 45px;
+}
+
+.Prod1-pic{
+    height: 200px;
+    width: 300px;
+    margin: 50px 20px 10px 80px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+
+.Prod-Column-Heading{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.Prod-Column-Text{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.Prod-Title-text{
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Prod-text{
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
