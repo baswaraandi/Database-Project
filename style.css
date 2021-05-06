@@ -1,3 +1,17 @@
+/*WEB FONTS*/
+@font-face {
+    font-family: Chewy-Reg;
+    src: url(Fonts/Chewy/Chewy-Regular.ttf);
+}
+@font-face {
+    font-family: Lato-Bold;
+    src: url(Fonts/Lato/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: Lato-Reg;
+    src: url(Fonts/Lato/Lato-Regular.ttf);
+}
+
 /*NAVBAR*/
 .Logopic{
     height: 60px;
@@ -10,8 +24,9 @@
 
 .Title_Navbar{
     float:left;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: 12px;
+    font-family: Chewy-Reg;
 }
 
 *, body{
@@ -47,7 +62,7 @@ nav ul li a{
     text-decoration: none;
     font-weight: bold;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato-Reg;
 }
 nav ul li a:hover{
     color: black;
@@ -56,27 +71,26 @@ nav ul li a:hover{
 h1{
     text-align: center;
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Chewy-Reg;
+    letter-spacing: 3px;
 }
 
 /*HOME*/
 
 .Homepic{
     height: 350px;
-    width: 325px;
-    margin: 50px 25px 50px 58px;
+    width: 360px;
+    margin: 50px 0px 30px 44px;
     border-style: solid;
     border-width: medium;
     border-color: black;
 }
 
-.Benefit-pic{
-    height: 150px;
-    width: 300px;
-    margin: 25px 50px 50px 60px;
-    border-style: solid;
-    border-width: medium;
-    border-color: black;
+.Benefit-title{
+    text-align: center;
+    font-size: 30px;
+    font-family: Chewy-Reg;
+    margin: 0px 0px 25px 0px;
 }
 
 .Benefit-text{
@@ -89,7 +103,6 @@ h1{
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-
     text-align: center;
 }
 
@@ -103,8 +116,8 @@ h1{
 
 .Prod1-pic{
     height: 200px;
-    width: 300px;
-    margin: 50px 20px 10px 80px;
+    width: 320px;
+    margin: 50px 10px 0px 70px;
     border-style: solid;
     border-width: medium;
     border-color: black;
@@ -116,7 +129,7 @@ h1{
     column-count: 3;
 
     text-align: center;
-    margin-left: 80px;
+    margin-left: 70px;
     margin-top: 20px;
 }
 
@@ -126,21 +139,22 @@ h1{
     column-count: 3;
 
     text-align: center;
-    margin-left: 80px;
-    margin-top: 40px;
+    margin-left: 70px;
+    margin-top: 20px;
 }
 
 .Prod-Title-text{
     font-weight: bold;
     text-align: left;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    font-family: Lato-Bold;
 }
 
 .Prod-text{
     text-align: left;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato-Reg;
+    line-height: 1.25;
 }
 
 /*BRANCH*/
@@ -152,7 +166,7 @@ h1{
 
     text-align: center;
     margin-left: 60px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .Branch-Column-Text{
@@ -166,9 +180,9 @@ h1{
 }
 
 .Branch-pic{
-    height: 350px;
+    height: 330px;
     width: 600px;
-    margin: 50px 0px 0px 20px;
+    margin: 30px 0px 0px 20px;
     border-style: solid;
     border-width: medium;
     border-color: black;
@@ -178,13 +192,13 @@ h1{
     font-weight: bold;
     text-align: left;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato-Bold;
 }
 
 .Branch-text{
     text-align: left;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato-Reg;
 }
 
 /*ABOUT US*/
@@ -208,7 +222,7 @@ h1{
 }
 
 .Aboutus-Prof-pic{
-    height: 300px;
+    height: 280px;
     width: 550px;
     margin: 50px 20px 0px 40px;
     border-style: solid;
