@@ -39,9 +39,11 @@ create table ship (
     foreign key (Id_Store) references store (Id_Store)
 );
 
-create table pegawai (
+create table transaksi (
+    Id_Transaksi varchar (15) not null primary key,
     Id_Store varchar (15) not null,
-    Nama_Pegawai varchar (20),
+    Nama_Buyer varchar (50) not null,
+    Tgl_Transaksi date not null,
     foreign key (Id_Store) references store (Id_Store)
 );
 
@@ -50,9 +52,9 @@ insert into stock values
 ("KUR102","Sukari Deluxe","Premium","Madinah",50),
 ("KUR103","Sukari Libya","Standard","Libya",20),
 ("KUR201","Palm Frutt Madu","Standard","Tunisia",10),
-("KUR301","Ajwa","Star","Madinah",100),
+("KUR301","Ajwa","Star","Madinah",100);
 
 insert into supplier values
-("SUP001","SUKARI AL-SWAG COMPANY","2021-02-31")
-("SUP002","PT. PALM FRUTT","2021-02-20")
-("SUP003","AJWA COMPANY","2021-02-31")
+("SUP001","SUKARI AL-SWAG COMPANY","2021-02-31"),
+("SUP002","PT. PALM FRUTT","2021-02-20"),
+("SUP003","AJWA COMPANY","2021-02-31");
