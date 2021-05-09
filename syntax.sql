@@ -5,7 +5,7 @@ create table stock(
     Jenis_Kurma varchar (20) not null,
     Qualitas_Kurma varchar (10) not null,
     Asal_Negara varchar (30),
-    Ketersediaan(Kg) int not null
+    Ketersediaan_Kg int not null
 );
 
 create table provide (
