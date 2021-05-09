@@ -13,7 +13,7 @@ create table provide (
     Id_Supplier varchar (15) not null,
     Tgl_Ambil date not null,
     foreign key (Id_Stock) references stock (Id_Stock),
-    foreign key (Id_Supplier) references stock (Id_Supplier)
+    foreign key (Id_Supplier) references supplier (Id_Supplier)
 );
 
 create table supplier (
