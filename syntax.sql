@@ -57,7 +57,7 @@ insert into stock values
 ("KUR301","Ajwa","Star","Madinah",500);
 
 insert into supplier values
-("SUP001","SUKARI AL-SWAG COMPANY","2021-02-28"),
+("SUP001","SUKARI COMPANY","2021-02-28"),
 ("SUP002","PT. PALM FRUTT","2021-02-20"),
 ("SUP003","AJWA COMPANY","2021-02-27");
 
