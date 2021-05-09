@@ -70,10 +70,10 @@ insert into provide values
 
 insert into store values
 ("STO001","Sukari Al-Qassim","Star",100000,30,"Agus"),
-("STO001","Ajwa","Star",170000,15,"Agus"),
-("STO002","Sukari Deluxe","Premium",80000,50,"Rheza"),
-("STO002","Sukari Libya","Standard",65000,100,"Rheza"),
-("STO003","Palm Frutt Madu","Standard",40000,200,"Oded");
+("STO002","Ajwa","Star",170000,15,"Agus"),
+("STO003","Sukari Deluxe","Premium",80000,50,"Rheza"),
+("STO004","Sukari Libya","Standard",65000,100,"Rheza"),
+("STO005","Palm Frutt Madu","Standard",40000,200,"Oded");
 
 insert into ship values
 ("SUP001","STO001","2021-04-01", "2021-04-04", "PT. CARGO 5"),
