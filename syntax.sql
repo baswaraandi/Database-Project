@@ -89,4 +89,4 @@ insert into transaksi values
 ("TR004","STO001","Afgan","2021-05-04"),
 ("TR005","STO001","Kiwil","2021-05-04"),
 ("TR006","STO001","Kiwil","2021-05-05"),
-("TR006","STO001","Afgan","2021-05-06");
+("TR007","STO001","Afgan","2021-05-06");
