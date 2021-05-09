@@ -38,7 +38,7 @@ create table store (
     Qualitas_Kurma varchar (10),
     Harga_Rp_perKg int not null,
     Jumlah_Kg int not null,
-    Nama_Pegawai varchar (20) not null,
+    Nama_Pegawai varchar (20) not null
 );
 
 create table transaksi (
