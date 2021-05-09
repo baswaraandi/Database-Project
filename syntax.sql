@@ -5,7 +5,7 @@ create table stock(
     Jenis_Kurma varchar (20) not null,
     Qualitas_Kurma varchar (10) not null,
     Asal_Negara varchar (30),
-    Ketersediaan(Kg) int not null
+    Ketersediaan_Kg int not null
 );
 
 create table provide (
@@ -13,7 +13,7 @@ create table provide (
     Id_Supplier varchar (15) not null,
     Tgl_Ambil date not null,
     foreign key (Id_Stock) references stock (Id_Stock),
-    foreign key (Id_Supplier) references stock (Id_Supplier)
+    foreign key (Id_Supplier) references supplier (Id_Supplier)
 );
 
 create table supplier (
@@ -36,9 +36,9 @@ create table store (
     Id_Store varchar (15) not null primary key,
     Jenis_Kurma varchar (20),
     Qualitas_Kurma varchar (10),
-    Harga(Rp/Kg) int not null,
-    Jumlah(Kg) int not null,
-    Nama_Pegawai varchar (20) not null,
+    Harga_Rp_perKg int not null,
+    Jumlah_Kg int not null,
+    Nama_Pegawai varchar (20) not null
 );
 
 create table transaksi (
@@ -57,7 +57,7 @@ insert into stock values
 ("KUR301","Ajwa","Star","Madinah",500);
 
 insert into supplier values
-("SUP001","SUKARI AL-SWAG COMPANY","2021-02-28"),
+("SUP001","SUKARI COMPANY","2021-02-28"),
 ("SUP002","PT. PALM FRUTT","2021-02-20"),
 ("SUP003","AJWA COMPANY","2021-02-27");
 
@@ -70,10 +70,10 @@ insert into provide values
 
 insert into store values
 ("STO001","Sukari Al-Qassim","Star",100000,30,"Agus"),
-("STO001","Ajwa","Star",170000,15,"Agus"),
-("STO002","Sukari Deluxe","Premium",80000,50,"Rheza"),
-("STO002","Sukari Libya","Standard",65000,100,"Rheza"),
-("STO003","Palm Frutt Madu","Standard",40000,200,"Oded");
+("STO002","Ajwa","Star",170000,15,"Agus"),
+("STO003","Sukari Deluxe","Premium",80000,50,"Rheza"),
+("STO004","Sukari Libya","Standard",65000,100,"Rheza"),
+("STO005","Palm Frutt Madu","Standard",40000,200,"Oded");
 
 insert into ship values
 ("SUP001","STO001","2021-04-01", "2021-04-04", "PT. CARGO 5"),
@@ -89,4 +89,4 @@ insert into transaksi values
 ("TR004","STO001","Afgan","2021-05-04"),
 ("TR005","STO001","Kiwil","2021-05-04"),
 ("TR006","STO001","Kiwil","2021-05-05"),
-("TR006","STO001","Afgan","2021-05-06");
+("TR007","STO001","Afgan","2021-05-06");
