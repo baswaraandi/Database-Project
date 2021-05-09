@@ -36,7 +36,7 @@ create table store (
     Id_Store varchar (15) not null primary key,
     Jenis_Kurma varchar (20),
     Qualitas_Kurma varchar (10),
-    Harga_Rp/Kg int not null,
+    Harga_Rp_perKg int not null,
     Jumlah_Kg int not null,
     Nama_Pegawai varchar (20) not null,
 );
