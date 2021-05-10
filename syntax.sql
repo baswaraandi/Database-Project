@@ -1,11 +1,19 @@
 create database Kurma;
 
+use kurma;
+
 create table stock( 
     Id_Stock varchar (15) not null primary key,
     Jenis_Kurma varchar (20) not null,
     Qualitas_Kurma varchar (10) not null,
     Asal_Negara varchar (30),
     Ketersediaan_Kg int not null
+);
+
+create table supplier (
+    Id_Supplier varchar (15) not null primary key,
+    Nama_Supplier varchar (20) not null,
+    Tgl_Masuk date not null
 );
 
 create table provide (
@@ -16,10 +24,13 @@ create table provide (
     foreign key (Id_Supplier) references supplier (Id_Supplier)
 );
 
-create table supplier (
-    Id_Supplier varchar (15) not null primary key,
-    Nama_Supplier varchar (20) not null,
-    Tgl_Masuk date not null
+create table store (
+    Id_Store varchar (15) not null primary key,
+    Jenis_Kurma varchar (20),
+    Qualitas_Kurma varchar (10),
+    Harga_Rp_perKg int not null,
+    Jumlah_Kg int not null,
+    Nama_Pegawai varchar (20) not null
 );
 
 create table ship (
@@ -30,15 +41,6 @@ create table ship (
     Jasa_Kirim varchar (15) not null,
     foreign key (Id_Supplier) references supplier (Id_Supplier),
     foreign key (Id_Store) references store (Id_Store)
-);
-
-create table store (
-    Id_Store varchar (15) not null primary key,
-    Jenis_Kurma varchar (20),
-    Qualitas_Kurma varchar (10),
-    Harga_Rp_perKg int not null,
-    Jumlah_Kg int not null,
-    Nama_Pegawai varchar (20) not null
 );
 
 create table transaksi (

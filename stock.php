@@ -21,7 +21,7 @@
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Ketersediaan_Kg" value="" placeholder="Enter Ketersediaan(KG) Kurma Here"
+          <input type="text" name="Ketersediaan_Kg" value="" placeholder="Enter Ketersediaan (Kg) Kurma Here"
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
