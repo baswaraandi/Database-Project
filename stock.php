@@ -106,7 +106,7 @@ while($r = mysqli_fetch_array($s))
             <td><?php echo $r['Qualitas_Kurma']; ?></td>
             <td><?php echo $r['Asal_Negara']; ?></td>
             <td><?php echo $r['Ketersediaan_Kg']; ?></td>
-            <td><a href = "delete.php?i=<?php echo $r['Id_Stock']; ?>">Remove</a></td>
+            <td><a href = "deletestock.php?i=<?php echo $r['Id_Stock']; ?>">Remove</a></td>
             <td><a href = "updatestock.php?i=<?php echo $r['Id_Stock']; ?>">Update</a></td>
         </tr>
     </tbody>
