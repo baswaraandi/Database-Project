@@ -1,4 +1,4 @@
-<body bgcolor= #b8977e>
+<body bgcolor= white>
 <div style="width: 50%; margin: 0 auto; border: 2px double #FF000";
     background-color: white; box-shadow: 1px 1px 10px 1px;">
     <h3 align="center">Insert New Record Here </h3>
@@ -21,7 +21,7 @@
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Ketersediaan_Kg" value="" placeholder="Enter Ketersediaan (Kg) Kurma Here"
+          <input type="text" name="Ketersediaan_Kg" value="" placeholder="Enter Ketersediaan(KG) Kurma Here"
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
@@ -49,44 +49,67 @@ $con = mysqli_connect("localhost","root","admin","kurma");
 $s=mysqli_query($con,"select * from stock");
 ?>
 <style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+    .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+    .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+    .content-table th,
+    .content-table td {
+    padding: 12px 15px
+}
+    .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
+    .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color: #4CAF50;
-  color: white;
+    .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
+    .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
 </style>
-<table border = 5>
-    <tr>
-        <th>Id_Stock</th>
-        <th>Jenis_Kurma</th>
-        <th>Qualitas_Kurma</th>
-        <th>Asal_Negara</th>
-        <th>Ketersediaan_Kg</th>
-        <th>Edit<th>
-    </tr>
+<table class = content-table>
+    <thead>
+        <tr>
+            <th>Id_Stock</th>
+            <th>Jenis_Kurma</th>
+            <th>Qualitas_Kurma</th>
+            <th>Asal_Negara</th>
+            <th>Ketersediaan_Kg</th>
+            <th>Remove<th>
+            <th>Update<th>
+        </tr>
+    </thead>
 <?php
 while($r = mysqli_fetch_array($s))
 {
 ?>
-    <tr>
-        <td><?php echo $r['Id_Stock']; ?></td>
-        <td><?php echo $r['Jenis_Kurma']; ?></td>
-        <td><?php echo $r['Qualitas_Kurma']; ?></td>
-        <td><?php echo $r['Asal_Negara']; ?></td>
-        <td><?php echo $r['Ketersediaan_Kg']; ?></td>
-        <td><a href = "update.php?i=<?php echo $r['id']; ?>">Update</a></td>
-    </tr>
+    <tbody>
+        <tr>
+            <td><?php echo $r['Id_Stock']; ?></td>
+            <td><?php echo $r['Jenis_Kurma']; ?></td>
+            <td><?php echo $r['Qualitas_Kurma']; ?></td>
+            <td><?php echo $r['Asal_Negara']; ?></td>
+            <td><?php echo $r['Ketersediaan_Kg']; ?></td>
+            <td><a href = "delete.php?i=<?php echo $r['Id_Stock']; ?>">Remove</a></td>
+            <td><a href = "updatestock.php?i=<?php echo $r['Id_Stock']; ?>">Update</a></td>
+        </tr>
+    </tbody>
 <?php
 }
 ?>
