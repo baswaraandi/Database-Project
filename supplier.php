@@ -27,10 +27,10 @@
 if(isset($_POST['ins']))
 {
     $con = mysqli_connect("localhost","root","admin","kurma");
-    $id = $_POST ['Id_Supplier'];
+    $ids = $_POST ['Id_Supplier'];
     $ns = $_POST ['Nama_Supplier'];
     $tm = $_POST ['Tgl_Masuk'];
-    mysqli_query($con,"insert into supplier values('$id','$ns','$tm')");
+    mysqli_query($con,"insert into supplier values('$ids','$ns','$tm')");
     echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
 }
 ?>

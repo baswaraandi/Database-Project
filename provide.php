@@ -1,4 +1,4 @@
-<body bgcolor= #b8977e>
+<body bgcolor= white>
 <div style="width: 50%; margin: 0 auto; border: 2px double #FF000";
     background-color: white; box-shadow: 1px 1px 10px 1px;">
     <h3 align="center">Insert New Record Here </h3>
@@ -27,10 +27,10 @@
 if(isset($_POST['ins']))
 {
     $con = mysqli_connect("localhost","root","admin","kurma");
-    $id_st = $_POST ['Id_Stock'];
-    $id_sup = $_POST ['Id_Supplier'];
+    $id = $_POST ['Id_Stock'];
+    $ids = $_POST ['Id_Supplier'];
     $ta = $_POST ['Tgl_Ambil'];
-    mysqli_query($con,"insert into stock values('$id_st','$id_sup','$ta')");
+    mysqli_query($con,"insert into provide values('$id','$ids','$ta')");
     echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
 }
 ?>
@@ -38,39 +38,65 @@ if(isset($_POST['ins']))
 $con = mysqli_connect("localhost","root","admin","kurma");
 $s=mysqli_query($con,"select * from provide");
 ?>
+
 <style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+    .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+    .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+    .content-table th,
+    .content-table td {
+    padding: 12px 15px
+}
+    .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
+    .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color: #4CAF50;
-  color: white;
+    .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
+    .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
 </style>
-<table border = 5>
+<table class = content-table>
+<thead>
     <tr>
         <th>Id_Stock</th>
         <th>Id_Supplier</th>
         <th>Tgl_Ambil</th>
+        <th>Remove<th>
+        <th>Update<th>
     </tr>
+</thead>
 <?php
 while($r = mysqli_fetch_array($s))
 {
 ?>
+<tbody>
     <tr>
         <td><?php echo $r['Id_Stock']; ?></td>
         <td><?php echo $r['Id_Supplier']; ?></td>
         <td><?php echo $r['Tgl_Ambil']; ?></td>
+        <td><a href = "deleteprov.php?i=<?php echo $r['Id_Stock']; ?>">Remove</a></td>
+        <td><a href = "updateprov.php?i=<?php echo $r['Id_Stock']; ?>">Update</a></td>
     </tr>
+</tbody>
 <?php
 }
 ?>

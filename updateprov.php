@@ -1,27 +1,19 @@
 <body bgcolor= white>
+<?php $i = $_GET['i'];?>
 <div style="width: 50%; margin: 0 auto; border: 2px double #FF000";
     background-color: white; box-shadow: 1px 1px 10px 1px;">
     <h3 align="center">Insert New Record Here </h3>
 <form action="" method="Post">
     <fieldset>
     <div style="padding: 10px; text-align: center;">
+          <input type="text" name="Id_Stock" value="<?php echo $i; ?>">
+      </div>
+      <div style="padding: 10px; text-align: center;">
           <input type="text" name="Id_Supplier" value="" placeholder="Enter Id Supplier Here"
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Id_Store" value="" placeholder="Enter Id Store Here"
-          style="padding: 5px; width : 90%">
-      </div>
-      <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Tgl_Kirim" value="" placeholder="Enter Tanggal Kirim Here (YY-MM-DD)"
-          style="padding: 5px; width : 90%">
-      </div>
-      <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Tgl_Sampai" value="" placeholder="Enter Tanggal Sampai Here (YY-MM-DD)"
-          style="padding: 5px; width : 90%">
-      </div>
-      <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Jasa_Kirim" value="" placeholder="Enter Jasa Kirim  Here"
+          <input type="text" name="Tgl_Ambil" value="" placeholder="Enter Tanggal Ambil Here (YY-MM-DD)"
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
@@ -32,22 +24,21 @@
 </form>
 </div>
 <?php
-if(isset($_POST['ins']))
+if(isset($_POST['up']))
 {
     $con = mysqli_connect("localhost","root","admin","kurma");
+    $i = $_POST ['Id_Stock'];
     $ids = $_POST ['Id_Supplier'];
-    $idst = $_POST ['Id_Store'];
-    $tk = $_POST ['Tgl_Kirim'];
-    $ts = $_POST ['Tgl_Sampai'];
-    $jk = $_POST ['Jasa_Kirim'];
-    mysqli_query($con,"insert into ship values('$ids','$idst','$tk','$ts','$jk')");
+    $ta = $_POST ['Tgl_Ambil'];
+    mysqli_query($con,"update provide set Id_Supplier = '$ids', Tgl_Ambil = '$ta' where Id_Stock ='$i'");
     echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
 }
 ?>
 <?php
 $con = mysqli_connect("localhost","root","admin","kurma");
-$s=mysqli_query($con,"select * from ship");
+$s=mysqli_query($con,"select * from provide");
 ?>
+
 <style>
     .content-table {
     border-collapse: collapse;
@@ -86,11 +77,11 @@ $s=mysqli_query($con,"select * from ship");
 <table class = content-table>
 <thead>
     <tr>
+        <th>Id_Stock</th>
         <th>Id_Supplier</th>
-        <th>Id_Store</th>
-        <th>Tgl_Kirim</th>
-        <th>Tgl_Sampai</th>
-        <th>Jasa_Kirim</th>
+        <th>Tgl_Ambil</th>
+        <th>Remove<th>
+        <th>Update<th>
     </tr>
 </thead>
 <?php
@@ -99,11 +90,11 @@ while($r = mysqli_fetch_array($s))
 ?>
 <tbody>
     <tr>
+        <td><?php echo $r['Id_Stock']; ?></td>
         <td><?php echo $r['Id_Supplier']; ?></td>
-        <td><?php echo $r['Id_Store']; ?></td>
-        <td><?php echo $r['Tgl_Kirim']; ?></td>
-        <td><?php echo $r['Tgl_Sampai']; ?></td>
-        <td><?php echo $r['Jasa_Kirim']; ?></td>
+        <td><?php echo $r['Tgl_Ambil']; ?></td>
+        <td><a href = "deleteprov.php?i=<?php echo $r['Id_Stock']; ?>">Remove</a></td>
+        <td><a href = "updateprov.php?i=<?php echo $r['Id_Stock']; ?>">Update</a></td>
     </tr>
 </tbody>
 <?php

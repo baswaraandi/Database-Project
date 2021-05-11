@@ -1,4 +1,4 @@
-<body bgcolor= #b8977e>
+<body bgcolor= white>
 <div style="width: 50%; margin: 0 auto; border: 2px double #FF000";
     background-color: white; box-shadow: 1px 1px 10px 1px;">
     <h3 align="center">Insert New Record Here </h3>
@@ -31,11 +31,11 @@
 if(isset($_POST['ins']))
 {
     $con = mysqli_connect("localhost","root","admin","kurma");
-    $id_t = $_POST ['Id_Transaksi'];
-    $id_s = $_POST ['Id_Store'];
+    $idt = $_POST ['Id_Transaksi'];
+    $idst = $_POST ['Id_Store'];
     $nb = $_POST ['Nama_Buyer'];
     $tt = $_POST ['Tgl_Transaksi'];
-    mysqli_query($con,"insert into stock values('$id_t','$id_s','$nb','$tt')");
+    mysqli_query($con,"insert into transaksi values('$idt','$idst','$nb','$tt')");
     echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
 }
 ?>
@@ -44,40 +44,61 @@ $con = mysqli_connect("localhost","root","admin","kurma");
 $s=mysqli_query($con,"select * from transaksi");
 ?>
 <style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+    .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+    .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+    .content-table th,
+    .content-table td {
+    padding: 12px 15px
+}
+    .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
+    .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color: #4CAF50;
-  color: white;
+    .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
+    .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
 </style>
-<table border = 5>
+<table class = content-table>
+<thead>
     <tr>
         <th>Id_Transaksi</th>
         <th>Id_Store</th>
         <th>Nama_Buyer</th>
         <th>Tgl_Transaksi</th>
     </tr>
+</thead>
 <?php
 while($r = mysqli_fetch_array($s))
 {
 ?>
+<tbody>
     <tr>
         <td><?php echo $r['Id_Transaksi']; ?></td>
         <td><?php echo $r['Id_Store']; ?></td>
         <td><?php echo $r['Nama_Buyer']; ?></td>
         <td><?php echo $r['Tgl_Transaksi']; ?></td>
     </tr>
+</tbody>
 <?php
 }
 ?>

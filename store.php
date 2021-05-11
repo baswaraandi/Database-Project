@@ -1,4 +1,4 @@
-<body bgcolor= #b8977e>
+<body bgcolor= white>
 <div style="width: 50%; margin: 0 auto; border: 2px double #FF000";
     background-color: white; box-shadow: 1px 1px 10px 1px;">
     <h3 align="center">Insert New Record Here </h3>
@@ -21,7 +21,7 @@
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
-          <input type="text" name="Jumlah_kg" value="" placeholder="Enter Jumlah (Kg) Kurma Here"
+          <input type="text" name="Jumlah_Kg" value="" placeholder="Enter Jumlah (Kg) Kurma Here"
           style="padding: 5px; width : 90%">
       </div>
       <div style="padding: 10px; text-align: center;">
@@ -39,13 +39,13 @@
 if(isset($_POST['ins']))
 {
     $con = mysqli_connect("localhost","root","admin","kurma");
-    $id = $_POST ['Id_Store'];
+    $idst= $_POST ['Id_Store'];
     $jk = $_POST ['Jenis_Kurma'];
     $qk = $_POST ['Qualitas_Kurma'];
-    $har = $_POST ['Harga_Rp_perKg'];
-    $jk = $_POST ['Jumlah_Kg'];
+    $hg = $_POST ['Harga_Rp_perKg'];
+    $jkg = $_POST ['Jumlah_Kg'];
     $np = $_POST ['Nama_Pegawai'];
-    mysqli_query($con,"insert into stock values('$id','$jk','$qk','$har','$jk','$np')");
+    mysqli_query($con,"insert into store values('$idst','$jk','$qk','$hg','$jkg','$np')");
     echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
 }
 ?>
@@ -54,24 +54,42 @@ $con = mysqli_connect("localhost","root","admin","kurma");
 $s=mysqli_query($con,"select * from store");
 ?>
 <style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+    .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+    .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+    .content-table th,
+    .content-table td {
+    padding: 12px 15px
+}
+    .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
+    .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color: #4CAF50;
-  color: white;
+    .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
+    .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
 </style>
-<table border = 5>
+<table class= content-table>
+<thead>
     <tr>
         <th>Id_Store</th>
         <th>Jenis_Kurma</th>
@@ -79,11 +97,15 @@ th {
         <th>Harga_Rp_perKg</th>
         <th>Jumlah_Kg</th>
         <th>Nama_Pegawai</th>
+        <th>Remove<th>
+        <th>Update<th>
     </tr>
+</thead>
 <?php
 while($r = mysqli_fetch_array($s))
 {
 ?>
+<tbody>
     <tr>
         <td><?php echo $r['Id_Store']; ?></td>
         <td><?php echo $r['Jenis_Kurma']; ?></td>
@@ -91,7 +113,10 @@ while($r = mysqli_fetch_array($s))
         <td><?php echo $r['Harga_Rp_perKg']; ?></td>
         <td><?php echo $r['Jumlah_Kg']; ?></td>
         <td><?php echo $r['Nama_Pegawai']; ?></td>
+        <td><a href = "deletestore.php?i=<?php echo $r['Id_Store']; ?>">Remove</a></td>
+        <td><a href = "updatestore.php?i=<?php echo $r['Id_Store']; ?>">Update</a></td>
     </tr>
+</tbody>
 <?php
 }
 ?>
