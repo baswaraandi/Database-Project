@@ -1,0 +1,180 @@
+/* ------------------------ WEB FONTS ----------------------------------- */
+@font-face {
+    font-family: Chewy-Reg;
+    src: url(assets/Chewy-Regular.ttf);
+}
+@font-face {
+    font-family: Lato-Bold;
+    src: url(assets/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: Lato-Reg;
+    src: url(assets/Lato-Regular.ttf);
+}
+
+/* ------------------------ NAVBAR ----------------------------------- */
+.Logopic{
+    height: 60px;
+    width: 65px;
+    text-align: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    float: left;
+}
+.Title_Navbar{
+    float:left;
+    margin-top: 20px;
+    margin-left: 12px;
+    font-family: Chewy-Reg;
+    letter-spacing: 3px;
+    text-align: right;
+    font-size: 24px;
+}
+.Admin-mode{
+    text-align: right;
+    font-size: 24px;
+    font-family: Lato-Bold;
+    letter-spacing: 1px;
+    float:right;
+    margin-top: 20px;
+    margin-right: 120px;
+    color: black;
+    padding: 2px 2px 2px 2px;
+}
+*, body{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: white;
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 75px;
+    background-color: #B8977E;
+    box-shadow: -1px -7px 20px 0px #888;
+}
+
+/* ------------------------ INDEX ----------------------------------- */
+.Column-paragraph{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+.Index-title{
+    padding: 7px 12px;
+    border:2px solid black;
+    text-align: center;
+    font-size: 30px;
+    font-family: Chewy-Reg;
+    margin: 0px 0px 25px 0px;
+    text-decoration: none;
+    color: black;
+}
+.Index-title:hover{
+    color: white;
+    background-color: green;
+}
+.Index-pic{
+    height: 100px;
+    width: 100px;
+    margin: 100px 160px 20px 160px;
+}
+
+/* ------------------------ FORM ----------------------------------- */
+.Form-title-style{
+    width: 50%; 
+    margin: 20 auto; 
+    border: 2px;
+    background-color: white;
+}
+.Form-title{
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato-Bold;
+    letter-spacing: 3px;
+}
+.Form-content-style{
+    padding: 10px; 
+    text-align: center;
+}
+
+/* ------------------------ TABLE ----------------------------------- */
+.content-table {
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    font-family: Lato-Bold;
+    width: 80%;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: medium;
+    margin-left: 120px;
+}
+.content-table thead tr {
+    background-color: green;
+    color: white;
+    text-align: left;
+}
+.content-table th{
+    padding: 12px 15px;
+}
+.content-table td {
+    padding: 12px 15px;
+    border-top: 2px solid black;
+}
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-of-type(even) {
+    background-color: black;
+}
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid black;
+}
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: black;
+}
+.text-remove{
+    text-decoration: none;
+    padding:0px 0px;
+    color: red;
+}
+.text-update{
+    text-decoration: none;
+    color: blue;
+}
+
+/* ------------------------ FOOTER PRODUCTS ----------------------------------- */
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+footer ul{
+    position: relative;
+    top: 20px;
+    margin: 0;
+    float:none;
+}
+footer ul li{
+    float: right;
+    display: block;
+    margin: 0px 70px 0px 0px;
+}
+footer ul li a{
+    padding: 10px 13px;
+    border: 2px solid black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
+    color: black;
+    font-family: Lato-Reg;
+}
+footer ul li a:hover{
+    color: white;
+    background-color: red;
+    
+}
