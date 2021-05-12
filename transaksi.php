@@ -57,6 +57,8 @@ $s=mysqli_query($con,"select * from transaksi");
         <th>Id_Store</th>
         <th>Nama_Buyer</th>
         <th>Tgl_Transaksi</th>
+        <th>Remove</th>
+        <th>Update</th>
     </tr>
 </thead>
 <?php
@@ -69,6 +71,8 @@ while($r = mysqli_fetch_array($s))
         <td><?php echo $r['Id_Store']; ?></td>
         <td><?php echo $r['Nama_Buyer']; ?></td>
         <td><?php echo $r['Tgl_Transaksi']; ?></td>
+        <td><a href = "deletetransaksi.php?i=<?php echo $r['Id_Transaksi']; ?>">Remove</a></td>
+        <td><a href = "updatetransaksi.php?i=<?php echo $r['Id_Transaksi']; ?>">Update</a></td>
     </tr>
 </tbody>
 <?php
