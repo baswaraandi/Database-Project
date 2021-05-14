@@ -3,13 +3,12 @@
 <nav>
     <img class="Logopic" src="assets/logo_kurded.png" alt="logo_kurded">
     <h1 class="Title_Navbar">Toko Kurma Barokah Al-Swagiyyah</h1>
-    <h1 class="Admin-mode">Admin Mode</h1>
 </nav>
 <div class="Form-title-style">
     <h3 class="Form-title">Insert New Record Here </h3>
 </div>
 <form action="" method="Post">
-    <fieldset>
+    <fieldset class="Fieldset">
     <div class="Form-content-style">
           <input type="text" name="Id_Transaksi" value="" placeholder="Enter Id Transaksi Here"
           style="padding: 7px; width : 70%">
@@ -42,7 +41,7 @@ if(isset($_POST['ins']))
     $nb = $_POST ['Nama_Buyer'];
     $tt = $_POST ['Tgl_Transaksi'];
     mysqli_query($con,"insert into transaksi values('$idt','$idst','$nb','$tt')");
-    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
+    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'><div>";
 }
 ?>
 <?php
@@ -71,8 +70,8 @@ while($r = mysqli_fetch_array($s))
         <td><?php echo $r['Id_Store']; ?></td>
         <td><?php echo $r['Nama_Buyer']; ?></td>
         <td><?php echo $r['Tgl_Transaksi']; ?></td>
-        <td><a href = "deletetransaksi.php?i=<?php echo $r['Id_Transaksi']; ?>">Remove</a></td>
-        <td><a href = "updatetransaksi.php?i=<?php echo $r['Id_Transaksi']; ?>">Update</a></td>
+        <td><a class="text-remove" href = "deletetransaksi.php?i=<?php echo $r['Id_Transaksi']; ?>">Remove</a></td>
+        <td><a class="text-update" href = "updatetransaksi.php?i=<?php echo $r['Id_Transaksi']; ?>">Update</a></td>
     </tr>
 </tbody>
 <?php

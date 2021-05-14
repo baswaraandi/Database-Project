@@ -4,13 +4,12 @@
 <nav>
     <img class="Logopic" src="assets/logo_kurded.png" alt="logo_kurded">
     <h1 class="Title_Navbar">Toko Kurma Barokah Al-Swagiyyah</h1>
-    <h1 class="Admin-mode">Admin Mode</h1>
 </nav>
 <div class="Form-title-style">
     <h3 class="Form-title">Insert New Record Here </h3>
 </div>
 <form action="" method="Post">
-    <fieldset>
+    <fieldset class="Fieldset">
     <div class="Form-content-style">
           <input type="text" name="Id_Store"  value="<?php echo $i; ?>">
       </div>
@@ -52,7 +51,7 @@ if(isset($_POST['up']))
     $jkg = $_POST ['Jumlah_Kg'];
     $np = $_POST ['Nama_Pegawai'];
     mysqli_query($con,"update stock set Jenis_Kurma = '$jk', Qualitas_Kurma = '$qk', Harga_Rp_perKg = '$hg', Jumlah_Kg = '$jkg', Nama_Pegawai = '$np' where Id_Store ='$i'");
-    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
+    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'><div>";
 }
 ?>
 <?php

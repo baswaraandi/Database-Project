@@ -4,13 +4,12 @@
 <nav>
     <img class="Logopic" src="assets/logo_kurded.png" alt="logo_kurded">
     <h1 class="Title_Navbar">Toko Kurma Barokah Al-Swagiyyah</h1>
-    <h1 class="Admin-mode">Admin Mode</h1>
 </nav>
 <div class="Form-title-style">
     <h3 class="Form-title">Insert New Record Here </h3>
 </div>
 <form action="" method="Post">
-    <fieldset>
+    <fieldset class="Fieldset">
     <div class="Form-content-style">
           <input type="text" name="Id_Supplier" value="<?php echo $i; ?>"> 
       </div>
@@ -37,7 +36,7 @@ if(isset($_POST['up']))
     $ns = $_POST ['Nama_Supplier'];
     $tm = $_POST ['Tgl_Masuk'];
     mysqli_query($con,"update supplier set Nama_Supplier = '$ns', Tgl_Masuk = '$tm' where Id_Supplier ='$i'");
-    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Di Update.....<div>";
+    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'><div>";
     header("location:supplier.php");
 }
 ?>

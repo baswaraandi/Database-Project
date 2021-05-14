@@ -3,13 +3,12 @@
 <nav>
     <img class="Logopic" src="assets/logo_kurded.png" alt="logo_kurded">
     <h1 class="Title_Navbar">Toko Kurma Barokah Al-Swagiyyah</h1>
-    <h1 class="Admin-mode">Admin Mode</h1>
 </nav>
 <div class="Form-title-style">
     <h3 class="Form-title">Insert New Record Here </h3>
 </div>
 <form action="" method="Post">
-    <fieldset>
+    <fieldset class="Fieldset">
     <div class="Form-content-style">
           <input type="text" name="Id_Supplier" value="" placeholder="Enter Id Supplier Here"
           style="padding: 7px; width : 70%">
@@ -37,7 +36,7 @@ if(isset($_POST['ins']))
     $ns = $_POST ['Nama_Supplier'];
     $tm = $_POST ['Tgl_Masuk'];
     mysqli_query($con,"insert into supplier values('$ids','$ns','$tm')");
-    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'> Data Berhasil Ditambahkan.....<div>";
+    echo "<div style= 'box-shadow;  1px 1px 5px 1px rgb(255, 90, 40);'><div>";
 }
 ?>
 <?php
