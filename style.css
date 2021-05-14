@@ -1,4 +1,4 @@
-/*WEB FONTS*/
+/* ------------------------ WEB FONTS ----------------------------------- */
 @font-face {
     font-family: Chewy-Reg;
     src: url(Fonts/Chewy/Chewy-Regular.ttf);
@@ -11,8 +11,24 @@
     font-family: Lato-Reg;
     src: url(Fonts/Lato/Lato-Regular.ttf);
 }
+@font-face {
+    font-family: Arvo-Bold;
+    src: url(Fonts/Arvo-Bold.ttf);
+}
+@font-face {
+    font-family: Arvo-Reg;
+    src: url(Fonts/Arvo-Regular.ttf);
+}
+*, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(Picture/bg/75290.jpg) no-repeat center fixed;
+    background-size: cover;
+}
 
-/*NAVBAR*/
+/* ------------------------ NAVBAR ----------------------------------- */
 .Logopic{
     height: 60px;
     width: 65px;
@@ -21,28 +37,21 @@
     margin-left: 15px;
     float: left;
 }
-
 .Title_Navbar{
     float:left;
     margin-top: 20px;
     margin-left: 12px;
-    font-family: Chewy-Reg;
+    font-family: Arvo-Bold;
+    letter-spacing: 1px;
+    text-align: right;
+    font-size: 24px;
 }
-
-*, body{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: white;
-}
-
 nav{
     position: relative;
     width: 100%;
     height: 75px;
-    background-color: #B8977E;
+    background: url(Picture/bg/75290.jpg) no-repeat center fixed;
+    background-size: cover;
     box-shadow: -1px -7px 20px 0px #888;
 }
 nav ul{
@@ -55,50 +64,59 @@ nav ul{
 nav ul li{
     float: left;
     display: block;
-    margin: 8px 25px 0px 17px;
+    margin: 8px 20px 0px 12px;
 }
-
 nav ul li a{
     text-decoration: none;
     font-weight: bold;
     color: black;
-    font-family: Lato-Reg;
+    font-family: Arvo-Reg;
 }
 nav ul li a:hover{
     color: black;
 }
 
-h1{
-    text-align: center;
-    font-size: 24px;
-    font-family: Chewy-Reg;
-    letter-spacing: 3px;
-}
-
-/*HOME*/
-
+/* ------------------------ HOME ----------------------------------- */
 .Homepic{
-    height: 350px;
-    width: 360px;
-    margin: 50px 0px 30px 44px;
+    height: 320px;
+    width: 330px;
+    margin: 20px 0px 30px 67px;
     border-style: solid;
-    border-width: medium;
+    border-width: 2px;
     border-color: black;
 }
-
+.Home-title{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arvo-Bold;
+    letter-spacing: 0px;
+    margin: 30px 0px 15px 0px;
+}
 .Benefit-title{
     text-align: center;
     font-size: 30px;
-    font-family: Chewy-Reg;
+    font-family: Arvo-Bold;
+    letter-spacing: 0px;
     margin: 0px 0px 25px 0px;
 }
-
 .Benefit-text{
     text-align: center;
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-family: Arvo-Reg;
+    width: 70%;
+    padding: 7px 12px;
+    border:0px solid black;
+    margin: 0px 0px 25px 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 22px;
+    background-color: white;
 }
-
+.Benefit-pic{
+    height: 60px;
+    width: 80px;
+    margin-bottom: 10px;
+}
 .Column-paragraph{
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -106,60 +124,172 @@ h1{
     text-align: center;
 }
 
-/*PRODUCTS - Page 1 - 2*/
+/* ------------------------ PRODUCTS - Page 1 - 2 ----------------------------------- */
 .Heading-Page{
-    float:none;
+    float: none;
     text-align: center;
-    font-size: 45px;
-    margin-top: 45px;
+    font-size: 40px;
+    font-family: Arvo-Bold;
+    letter-spacing: 0px;
+    margin: 30px 0px 15px 0px;
 }
-
 .Prod1-pic{
     height: 200px;
     width: 320px;
     margin: 50px 10px 0px 70px;
     border-style: solid;
-    border-width: medium;
+    border-width: 2px;
     border-color: black;
 }
-
-.Prod-Column-Heading{
+.Prod-Column{
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-
     text-align: center;
     margin-left: 70px;
     margin-top: 20px;
 }
-
-.Prod-Column-Text{
+.Prod-Column-icon{
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-
+    margin-top: 25px;
     text-align: center;
-    margin-left: 70px;
-    margin-top: 20px;
 }
-
 .Prod-Title-text{
     font-weight: bold;
     text-align: left;
     font-size: 27px;
     font-family: Lato-Bold;
 }
-
 .Prod-text{
     text-align: left;
     font-size: 16px;
     font-family: Lato-Reg;
     line-height: 1.25;
 }
+.Buy-icon{
+    height: 60px;
+    width: 110px;
+}
 
-/*FOOTER PRODUCTS*/
+/* ------------------------ PRODUCT CARTS ----------------------------------- */
+.Prodcart-Heading-Page{
+    float: none;
+    text-align: center;
+    font-size: 40px;
+    font-family: Arvo-Bold;
+    letter-spacing: 0px;
+    margin: 30px 0px 35px 0px;
+}
+.Prodcart-column{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    text-align: center;
+    margin-top: 20px;
+}
+.Prodcart-pic {
+    height: 300px;
+    width: 420px;
+    margin: 15px 10px 0px 70px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+.Fieldset-column{
+    column-count: 2;
+    margin-bottom: 10px;
+}
+.Fieldset-stock{
+    color: black;
+    text-align: right;
+    font-family: Arvo-Reg;
+}
+.Fieldset-availability{
+    color: green;
+    text-align: left;
+    font-family: Arvo-Bold;
+}
+label {
+    font-family: Arvo-Reg;
+    padding: 7px 10px 10px 0;
+    display: inline-block;
+}
+input {
+    width: 70%;
+    padding: 7px;
+    border: 1px solid #ccc;
+}
+.col-30 {
+    float: left;
+    text-align: left;
+    margin-left: 15px;
+    width: 30%;
+    margin-top: 6px;
+}
+.col-70 {
+    float: right;
+    width: 60%;
+    margin-top: 6px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.Prodcart-Title-text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 205px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 27px;
+    font-family: Lato-Bold;
+}
+.Prodcart-text{
+    text-align: left;
+    margin-left: 225px;
+    font-size: 16px;
+    font-family: Lato-Reg;
+    line-height: 1.25;
+}
+.Submit{
+    padding: 5px 8px;
+    border:2px solid black;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arvo-Reg;
+    float: right;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+    background-color: white;
+}
+.Submit:hover{
+    color: white;
+    background-color: green;
+}
+.Back{
+    padding: 5px 8px;
+    border:2px solid black;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arvo-Reg;
+    float: right;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+    background-color: white;
+}
+.Back:hover{
+    color: white;
+    background-color: red;
+}
+
+/* ------------------------ FOOTER PRODUCTS ----------------------------------- */
 footer {
-    padding: 10px;
+    padding: 10px 15px;
     text-align: center;
     color: white;
   }
@@ -172,25 +302,24 @@ footer ul{
 footer ul li{
     float: right;
     display: block;
-    margin: 200px 70px 0px 0px;
+    margin: 120px 40px 0px 0px;
 }
-
 footer ul li a{
     outline-style: solid;
     outline-color: black;
-    outline-offset: 5px;
+    outline-width: 1px;
     text-decoration: none;
     font-weight: bold;
-    font-size: medium;
+    font-size: 30px;
     color: black;
     font-family: Lato-Reg;
+    background-color: #e3aa7b;
 }
 footer ul li a:hover{
     color: black;
 }
 
-/*BRANCH*/
-
+/* ------------------------ BRANCH ----------------------------------- */
 .Branch-Column-Heading{
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -200,7 +329,6 @@ footer ul li a:hover{
     margin-left: 60px;
     margin-top: 20px;
 }
-
 .Branch-Column-Text{
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -210,7 +338,6 @@ footer ul li a:hover{
     margin-left: 60px;
     margin-top: 20px;
 }
-
 .Branch-pic{
     height: 330px;
     width: 600px;
@@ -219,21 +346,19 @@ footer ul li a:hover{
     border-width: medium;
     border-color: black;
 }
-
 .Branch-Title-text{
     font-weight: bold;
     text-align: left;
     font-size: 30px;
     font-family: Lato-Bold;
 }
-
 .Branch-text{
     text-align: left;
     font-size: 16px;
     font-family: Lato-Reg;
 }
 
-/*ABOUT US*/
+/* ------------------------ ABOUT US ----------------------------------- */
 .Aboutus-Column-Heading{
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -243,7 +368,6 @@ footer ul li a:hover{
     margin-left: 70px;
     margin-top: 30px;
 }
-
 .Aboutus-Logo-pic{
     height: 70px;
     width: 70px;
@@ -252,7 +376,6 @@ footer ul li a:hover{
     border-width: medium;
     border-color: black;
 }
-
 .Aboutus-Prof-pic{
     height: 280px;
     width: 550px;
