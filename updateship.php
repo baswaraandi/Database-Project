@@ -6,31 +6,31 @@
     <h1 class="Title_Navbar">Toko Kurma Barokah Al-Swagiyyah</h1>
 </nav>
 <div class="Form-title-style">
-    <h3 class="Form-title">Insert New Record Here </h3>
+    <h3 class="Form-title">Update Record Here</h3>
 </div>
 <form action="" method="Post">
     <fieldset class="Fieldset">
-    <div class="Form-content-style">
-          <input type="text" name="Id_Supplier" value="<?php echo $i; ?>">
+        <div class="Form-content-style">
+          <center><input class="Form-content-style" type="text" name="Id_Supplier" value="<?php echo $i; ?>">
       </div>
       <div class="Form-content-style">
-          <input type="text" name="Id_Store" value="" placeholder="Enter Id Store Here"
+          <center><input class="Form-content-style" type="text" name="Id_Store" value="" placeholder="Enter Id Store Here"
           style="padding: 7px; width : 70%">
       </div>
       <div class="Form-content-style">
-          <input type="text" name="Tgl_Kirim" value="" placeholder="Enter Tanggal Kirim Here (YY-MM-DD)"
+          <center><input class="Form-content-style" type="date" name="Tgl_Kirim" value="" placeholder="Enter Tanggal Kirim Here (YY-MM-DD)"
           style="padding: 7px; width : 70%">
       </div>
       <div class="Form-content-style">
-          <input type="text" name="Tgl_Sampai" value="" placeholder="Enter Tanggal Sampai Here (YY-MM-DD)"
+          <center><input class="Form-content-style" type="date" name="Tgl_Sampai" value="" placeholder="Enter Tanggal Sampai Here (YY-MM-DD)"
           style="padding: 7px; width : 70%">
       </div>
       <div class="Form-content-style">
-          <input type="text" name="Jasa_Kirim" value="" placeholder="Enter Jasa Kirim  Here"
+          <center><input class="Form-content-style" type="text" name="Jasa_Kirim" value="" placeholder="Enter Jasa Kirim  Here"
           style="padding: 7px; width : 70%">
       </div>
-      <div class="Form-content-style">
-          <input type="submit" name="ins" value="Edit Data"
+      <div class="Form-submit-style">
+          <center><input class="Form-submit-style" type="submit" name="ins" value="Update Data"
           style="padding: 5px; width : 30%">
       </div>
       </fieldset>
@@ -54,39 +54,8 @@ $con = mysqli_connect("localhost","root","","kurma");
 $s=mysqli_query($con,"select * from ship");
 ?>
 
-<table class = content-table>
-<thead>
-    <tr>
-        <th>Id_Supplier</th>
-        <th>Id_Store</th>
-        <th>Tgl_Kirim</th>
-        <th>Tgl_Sampai</th>
-        <th>Jasa_Kirim</th>
-        <th>Remove</th>
-        <th>Update</th>
-    </tr>
-</thead>
-<?php
-while($r = mysqli_fetch_array($s))
-{
-?>
-<tbody>
-    <tr>
-        <td><?php echo $r['Id_Supplier']; ?></td>
-        <td><?php echo $r['Id_Store']; ?></td>
-        <td><?php echo $r['Tgl_Kirim']; ?></td>
-        <td><?php echo $r['Tgl_Sampai']; ?></td>
-        <td><?php echo $r['Jasa_Kirim']; ?></td>
-        <td><a class="text-remove" href = "deletetship.php?i=<?php echo $r['Id_Supplier']; ?>">Remove</a></td>
-        <td><a class="text-update" href = "updatetship.php?i=<?php echo $r['Id_Supplier']; ?>">Update</a></td>
-    </tr>
-</tbody>
-<?php
-}
-?>
-</table>
 <footer>
     <ul>
-        <li><a href="index.php">BACK</a></li>
+        <li><a href="ship.php">BACK</a></li>
     </ul>
 </footer>

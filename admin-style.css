@@ -51,6 +51,7 @@ body {
     font-size: 26px;
     font-family: Arvo-Bold;
     letter-spacing: 1px;
+    text-decoration: none;
     float:none;
     margin-top: 100px;
     color: white;
@@ -97,6 +98,14 @@ nav{
     width: 100px;
     margin: 140px 160px 20px 160px;
 }
+.Title-menu{
+    float: none;
+    text-align: center;
+    font-size: 40px;
+    font-family: Arvo-Bold;
+    letter-spacing: 1px;
+    margin: 40px 0px 15px 0px;
+}
 
 /* ------------------------ FORM ----------------------------------- */
 .Form-title-style{
@@ -112,12 +121,18 @@ nav{
 }
 .Form-content-style{
     padding: 10px 15px; 
-    text-align: center;
+    text-align: left;
     float: none;
     margin-top: 4px;
 }
 .Form-content-style:focus{
-    border: 2px solid black;
+    background-color: #f7e4ce;
+}
+.Form-submit-style{
+    padding: 10px 15px; 
+    text-align: center;
+    float: none;
+    margin-top: 4px;
 }
 .Fieldset{
     width: 80%;
@@ -130,6 +145,7 @@ nav{
 .content-table {
     border-collapse: collapse;
     margin: 25px;
+    margin-top: 30px;
     font-size: 0.9em;
     font-family: Lato-Bold;
     width: 80%;
@@ -163,15 +179,18 @@ nav{
 }
 .text-remove{
     text-decoration: none;
-    padding:0px 0px;
     color: red;
 }
 .text-update{
     text-decoration: none;
     color: blue;
 }
+.text-add{
+    text-decoration: none;
+    color: green;
+}
 
-/* ------------------------ FOOTER PRODUCTS ----------------------------------- */
+/* ------------------------ FOOTER ----------------------------------- */
 footer {
     padding: 10px;
     text-align: center;
@@ -182,24 +201,69 @@ footer ul{
     top: 20px;
     margin: 0;
     float:none;
+    margin-right: 100px;
 }
 footer ul li{
     float: right;
     display: block;
-    margin: 0px 70px 0px 0px;
+    margin: 0px 10px 0px 0px;
 }
 footer ul li a{
-    padding: 10px 13px;
+    padding: 7px 12px;
     border: 2px solid black;
     text-decoration: none;
     font-weight: bold;
     font-size: medium;
     color: black;
     font-family: Lato-Reg;
-    border-radius: 15px;
+    border-radius: 22px;
     background-color: white;
 }
 footer ul li a:hover{
     color: white;
     background-color: red;
+}
+.Menu-back{
+    float: right;
+    padding: 7px 12px;
+    border:2px solid black;
+    font-weight: bold;
+    text-align: center;
+    font-size: medium;
+    font-family: Lato-Reg;
+    margin: 15px 120px 0px 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 22px;
+    background-color: white;
+}
+.Menu-back:hover{
+    color: white;
+    background-color: red;
+}
+.Menu-add{
+    float: right;
+    padding: 7px 12px;
+    border:2px solid black;
+    font-weight: bold;
+    text-align: center;
+    font-size: medium;
+    font-family: Lato-Reg;
+    margin: 15px 10px 0px 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 22px;
+    background-color: white;
+}
+.Menu-add:hover{
+    color: white;
+    background-color: green;
+}
+
+/* ------------------------ KURMA TERBANG ----------------------------------- */
+.Kurmaterb{
+    height: 60px;
+    width: 60px;
+    text-align: left;
+    float: left;
 }

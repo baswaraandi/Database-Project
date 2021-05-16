@@ -10,7 +10,7 @@
 <body>
 <link rel="stylesheet" href="admin-style.css">
 <nav>
-    <img class="Logopic" src="assets/logo_kurded.png" alt="logo_kurded">
+    <a href="kurmaterbang.html"><img class="Logopic" src="assets/logo_kurded.png" alt="logo_kurded"></a>
     <h1 class="Title_Navbar">Toko Kurma Barokah Al-Swagiyyah</h1>
 </nav>
 <section class="Column-paragraph">
@@ -30,5 +30,5 @@
     <center><a class="Index-title" href = "transaksi.php"> View transaksi</a> </center>
 </section>
 <section>
-    <center><h1 class="Admin-mode">Admin Mode<h1>
+    <center><a href="html/home_menu.html"><h1 class="Admin-mode">Admin Mode</h1>
 </section>
