@@ -1,5 +1,6 @@
 # Project Sistem Database 1
-Project UAS "Kurma Universe"
+UAS Praktikum Sistem Database 1
+Judul : Toko Kurma Barokah Al-Swagiyyah
 
 Kelompok 7
 
