@@ -3,7 +3,7 @@ UAS Praktikum Sistem Database 1
 
 Judul : Toko Kurma Barokah Al-Swagiyyah
 
-Kelompok 7
+Kelompok 5
 
 Anggota Kelompok:
 1. Affan Rifqy Kurniadi (140810200003)
