@@ -30,5 +30,5 @@
     <center><a class="Index-title" href = "transaksi.php"> View transaksi</a> </center>
 </section>
 <section>
-    <center><a href="html/home_menu.html"><h1 class="Admin-mode">Admin Mode</h1>
+    <center><h1 class="Admin-mode">Admin Mode</h1>
 </section>
